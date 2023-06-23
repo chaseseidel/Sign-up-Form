@@ -1,0 +1,50 @@
+:root {
+    --full-height: 100vh;
+    --left-bar: 50vw;
+    --right-bar: calc(100vw - var(--left-bar));
+    --logo-side-length:150px;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arvo', serif;
+}
+
+.background {
+    min-height: var(--full-height);
+    min-width: var(--left-bar);
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-container {
+    position: relative;
+    bottom: 15vh;
+    display: flex;
+    background-color: rgba(0,0,0,0.6);
+    color: #ffffff;
+}
+
+#logo {
+    width: var(--logo-side-length);
+    height: var(--logo-side-length);
+}
+
+#text {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    font-size: 54px;
+    padding-left: 12px;
+}
+
+.form {
+    min-height: var(--full-height);
+    min-width: var(--right-bar);
+    background-color: #ededed;
+}
