@@ -18,38 +18,47 @@
     </div>
     <div class="right">
         <div class="intro">
-
+            <p class="dummy-text">This is not a real online service! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi illo nulla at repudiandae maiores similique explicabo suscipit enim, cumque pariatur. </p>
+            <p class="dummy-text">Sign up <em>now</em> to get started.</p>
+            <p>You <em>know</em> you want to.</p>
         </div>
         <form action="#"">
             <div class="form">
-                <div class="input">
-                    <label for="first_name">First Name</label>
-                    <input type="text" id="first_name" name="first_name">
+                <p id="form-dummy-text">Let's do this!</p>
+                <div class="input-box">
+                    <div class="input">
+                        <label for="first_name">First Name</label>
+                        <input type="text" id="first_name" name="first_name">
+                    </div>
+                    <div class="input">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" id="last_name" name="last_name">
+                    </div>
+                    <div class="input">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="input">
+                        <label for="phone_number">Phone Number</label>
+                        <input type="tel" id="phone_number" name="phone_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                    </div>
+                    <div class="input">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" minlength="8">
+                    </div>
+                    <div class="input">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="password" name="password" minlength="8">
+                    </div>
                 </div>
-                <div class="input">
-                    <label for="last_name">Last Name</label>
-                    <input type="text" id="last_name" name="last_name">
-                </div>
-                <div class="input">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email">
-                </div>
-                <div class="input">
-                    <label for="phone_number">Phone Number</label>
-                    <input type="tel" id="phone_number" name="phone_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
-                </div>
-                <div class="input">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" minlength="8">
-                </div>
-                <div class="input">
-                    <label for="confirm-password">Confirm Password</label>
-                    <input type="password" id="password" name="password" minlength="8">
+                <div class="create-account">
+                    <button type="submit" class="submit">Create Account</button>
                 </div>
             </div>
         </form>
-        <div class="account-info">
-
+        <div class="log-in-box">
+            <p>Already have an account?</p>
+            <a href="https://www.google.com" id="log-in">Log In</a>
         </div>
     </div>
 </body>
