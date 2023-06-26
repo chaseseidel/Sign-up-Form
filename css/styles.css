@@ -3,7 +3,9 @@
     --left-bar: 40vw;
     --right-bar: calc(100vw - var(--left-bar));
     --logo-side-length:150px;
-    --select-color: rgb(133, 206, 255);
+    --page-color: #f1f4f5;
+    --select-color: #759fc6;
+    --account-color: rgb(219, 79, 103);
     --outline: 1px solid red;
     --padding-from-left: 36px;
 }
@@ -18,6 +20,7 @@ body, .text-container {
     display: flex;
     flex-direction: row wrap;
 }
+
 .left {
     min-height: var(--full-height);
     min-width: var(--left-bar);
@@ -50,7 +53,7 @@ body, .text-container {
 .right {
     min-height: var(--full-height);
     min-width: var(--right-bar);
-    background-color: #ededed;
+    background-color: var(--page-color);
     flex-flow: column nowrap;
 }
 
@@ -58,21 +61,24 @@ body, .text-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    min-height: calc((1/3) * var(--full-height));
+    min-height: calc((0.3) * var(--full-height));
     margin: 0;
     padding: 18px var(--padding-from-left);
     font-size: 20px;
 }
 
+.dummy-text {
+    margin: 0;
+}
+
 #form-dummy-text {
-    font-size: 18px;
+    font-size: 24px;
     padding-left: var(--padding-from-left);
 }
 
 .form {
     display: flex;
     flex-flow: column wrap;
-    background-color: #ffffff;
 }
 
 .input-box {
@@ -80,28 +86,33 @@ body, .text-container {
     flex-flow: row wrap;
     text-transform: uppercase;
     padding-bottom: 20px;
-    box-shadow: 0 4px 4px 1px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 4px 1px rgba(0, 0, 0, 0.2);
 }
 
 .create-account {
     display: flex;
-    padding: 16px var(--padding-from-left);
+    padding: 32px 0 16px var(--padding-from-left);
 }
 
 .submit {
     width: 250px;
     height: 50px;
-    border: 1px solid black;
-    border-radius: 6px;
+    border-style: none;
+    border-radius: 4px;
+    background-color: var(--select-color);
     font-size: 18px;
-    box-shadow: 0 4px 4px 1px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.4);
+}
+
+.submit:hover {
+    transform: scale(1.05);
 }
 
 .input {
     display: flex;
     flex-flow: column wrap;
     width: max(40%, 170px);
-    margin: 0 16px 8px var(--padding-from-left);
+    margin: 0 16px 20px var(--padding-from-left);
 }
 
 .log-in-box {
@@ -113,10 +124,16 @@ body, .text-container {
 #log-in {
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color: #3d77ad;
+}
+
+#log-in:hover {
+    text-decoration: underline;
 }
 
 input {
-    border: 1px solid grey;
+    border: 1px solid rgb(175, 175, 175);
     border-radius: 3px;
     height: 24px;
 }
@@ -130,7 +147,6 @@ input:invalid {
 }
 
 input:focus {
-    background-color: white;
     border: 2px solid var(--select-color);
     box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     outline: none;
