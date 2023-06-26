@@ -4,6 +4,8 @@
     --right-bar: calc(100vw - var(--left-bar));
     --logo-side-length:150px;
     --select-color: rgb(133, 206, 255);
+    --outline: 1px solid red;
+    --padding-from-left: 36px;
 }
 
 body {
@@ -39,9 +41,10 @@ body, .text-container {
 }
 
 #text {
+    text-align: center;
     align-items: center;
     font-size: 54px;
-    padding-left: 12px;
+    padding-left: var(--padding-from-left);
 }
 
 .right {
@@ -51,22 +54,65 @@ body, .text-container {
     flex-flow: column nowrap;
 }
 
-.intro, .account-info {
-    min-height: calc(100vh / 4);
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: calc((1/3) * var(--full-height));
+    margin: 0;
+    padding: 18px var(--padding-from-left);
+    font-size: 20px;
+}
+
+#form-dummy-text {
+    font-size: 18px;
+    padding-left: var(--padding-from-left);
 }
 
 .form {
     display: flex;
+    flex-flow: column wrap;
+    background-color: #ffffff;
+}
+
+.input-box {
+    display: flex;
     flex-flow: row wrap;
-    min-height: 20vh;
     text-transform: uppercase;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 4px 1px rgba(0, 0, 0, 0.4);
+}
+
+.create-account {
+    display: flex;
+    padding: 16px var(--padding-from-left);
+}
+
+.submit {
+    width: 250px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 6px;
+    font-size: 18px;
+    box-shadow: 0 4px 4px 1px rgba(0, 0, 0, 0.4);
 }
 
 .input {
     display: flex;
     flex-flow: column wrap;
-    width: 40%;
-    margin: 0 15px;
+    width: max(40%, 170px);
+    margin: 0 16px 8px var(--padding-from-left);
+}
+
+.log-in-box {
+    display: flex;
+    gap: 10px;
+    padding: 0 var(--padding-from-left);
+}
+
+#log-in {
+    display: flex;
+    align-items: center;
 }
 
 input {
@@ -90,4 +136,7 @@ input:focus {
     outline: none;
 }
 
+a {
+    color: #ff0000;
+}
 
