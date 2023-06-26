@@ -3,6 +3,7 @@
     --left-bar: 40vw;
     --right-bar: calc(100vw - var(--left-bar));
     --logo-side-length:150px;
+    --select-color: rgb(133, 206, 255);
 }
 
 body {
@@ -69,20 +70,24 @@ body, .text-container {
 }
 
 input {
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 4px;
+    border: 1px solid grey;
+    border-radius: 3px;
     height: 24px;
 }
 
 input:valid {
-    border-color: #000000;
+    background-color: white;
 }
 
 input:invalid {
-    border-color: #ff0000;
+    border: 2px solid #ff0000;
 }
 
-
+input:focus {
+    background-color: white;
+    border: 2px solid var(--select-color);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    outline: none;
+}
 
 
